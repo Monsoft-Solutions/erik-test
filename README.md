@@ -1,9 +1,5 @@
 # Developer Test Specification for Monsoft Solutions
 
-## Introduction
-
-Welcome and thank you for your interest in joining **Monsoft Solutions**! To evaluate your skills and fit for our team, we have prepared a test project that mirrors the type of work you'll be engaging in. This project focuses on both client-side and server-side development, emphasizing your ability to build a functional, full-stack feature within our tech stack.
-
 ## Objective
 
 Develop a simple CRM module that allows users to **view**, **filter**, **create**, and **update** contact data. This project will help us assess your proficiency with our technology stack, your ability to deliver clean and maintainable code, and your problem-solving skills.
@@ -15,7 +11,6 @@ Please use the following technologies and tools for this test:
 - **Frontend:**
   - **Framework:** React
   - **Language:** TypeScript
-  - **State Management:** Your choice (e.g., Redux, Zustand)
   - **Styling:** [Tailwind CSS](https://tailwindcss.com/) and [Radix UI](https://radix-ui.com/)
 - **Backend:**
   - **Framework:** NestJS
@@ -27,10 +22,10 @@ Please use the following technologies and tools for this test:
     - `"@trpc/server": "^11.0.0-rc.553"`
 - **Database:**
 
-  - **Type:** MySQL
+  - **Type:** MySQL (don't required, you can simulate with in-memory database)
 
 - **Version Control:**
-  - **Repository:** GitHub (You will create a new GitHub project for this test)
+  - **Repository:** GitHub
 
 ## Functional Requirements
 
@@ -50,6 +45,8 @@ Implement a **Contact** entity with the following fields:
 - `updatedAt` (timestamp, auto-updated)
 
 ### 2. Backend Features
+
+NOTE: The following endpoints should be implemented using TPRC.
 
 - **API Endpoints:**
 
@@ -87,21 +84,21 @@ Implement a **Contact** entity with the following fields:
 
 - **Filtering:**
 
-  - Provide input fields or dropdowns to filter contacts based on `firstName`, `lastName`, `email`, `company`, `position`, and `status`.
+  - Above the table, provide a section that contains input fields and dropdowns to filter contacts based on `firstName`, `lastName`, `email`, `company`, `position`, and `status`.
   - The `status` filter should be a dropdown element.
   - The table should update in real-time as filters are applied.
 
 - **Create Contact:**
 
   - Provide a form or modal to input new contact details.
-  - Use **Tailwind CSS** and **Radix UI** components to build the form.
+  - The user should be able to click a button to open the form or redirect to the form.
   - Validate inputs on the client-side before submission.
   - Upon successful creation, the new contact should appear in the contacts table.
 
 - **Update Contact:**
 
   - Allow users to edit existing contact details via inline editing or a separate form/modal.
-  - Use **Tailwind CSS** and **Radix UI** components for the editing interface.
+  - The user should be able to select a contact from the table and initiate the editing process.
   - Validate inputs on the client-side before submission.
   - Upon successful update, the changes should reflect in the contacts table.
 
@@ -121,12 +118,11 @@ Implement a **Contact** entity with the following fields:
 - **Documentation:**
 
   - Provide a comprehensive README with setup instructions, project structure overview, and any other relevant information.
-  - Include database setup scripts or migration files.
+  - Include database setup scripts or migration files (if necessary).
 
 - **Version Control:**
 
   - Use Git for version control.
-  - Create a new GitHub project repository for this test.
   - Make regular, meaningful commits with clear messages.
 
 - **Performance:**
@@ -153,25 +149,19 @@ Implement a **Contact** entity with the following fields:
      - **Project Structure:** Overview of the codebase structure.
      - **Installation Steps:** How to install dependencies for both frontend and backend.
      - **Running the Application:** Commands to start the frontend and backend servers.
-     - **Database Setup:** Instructions on setting up the MySQL database, including running any provided SQL scripts or migration files.
+     - **Database Setup:** Instructions on setting up the MySQL database, including running any provided SQL scripts or migration files (if necessary).
      - **Technology Stack:** List of technologies and libraries used, including versions.
      - **Assumptions:** Any assumptions made during development.
-     - **Usage:** How to use the application features.
      - **Testing (Optional):** Instructions on how to run any included tests.
-     - **Contact Information:** How to reach you in case of questions.
 
 3. **Database Setup:**
 
-   - SQL scripts or migration files using Drizzle to create the necessary database schema, including the **Contact** entity with the `status` field.
-
-4. **Demo (Optional but Recommended):**
-   - A deployed version of the application (e.g., using Vercel, Heroku) to showcase functionality.
+   - SQL scripts or migration files using Drizzle to create the necessary database schema, including the **Contact** entity with the `status` field (if necessary).
 
 ## Timeframe
 
-- **Total Time:** 5 Days
-- **Start Date:** [Specify Start Date]
-- **Submission Deadline:** [Specify End Date]
+- **Total Time:** x Days
+- **Start Date:** [11/18/2024]
 
 ## Evaluation Criteria
 
@@ -222,19 +212,4 @@ Your submission will be evaluated based on the following aspects:
   - While not mandatory, including unit or integration tests will be considered a plus.
 
 - **Communication:**
-  - If you encounter any issues or have questions during the test period, feel free to reach out to [Your Contact Information].
-
-## Submission Instructions
-
-1. **GitHub Repository:**
-
-   - Create a new GitHub repository for this test project.
-   - Ensure your repository is accessible (provide access if it's private).
-   - Include all necessary files and documentation as outlined in the Deliverables section.
-
-2. **Submission:**
-
-   - Send the GitHub repository link and any deployed demo links to [Your Email Address] by the submission deadline.
-
-3. **Verification:**
-   - Upon receiving your submission, we may reach out for a brief discussion or clarification if needed.
+  - If you encounter any issues or have questions during the test period, feel free to reach out to adriano@monsoftsolutions.com.
